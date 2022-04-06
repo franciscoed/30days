@@ -33,7 +33,7 @@ st.sidebar.markdown('[Streamlit](https://streamlit.io) é uma biblioteca Python 
 
 st.sidebar.header('Recursos')
 st.sidebar.markdown('''
-- [Documentação do Streamlit (em ingl6es)](https://docs.streamlit.io/)
+- [Documentação do Streamlit (em inglês)](https://docs.streamlit.io/)
 - [Cheat sheet](https://docs.streamlit.io/library/cheatsheet)
 - [Livro - Amazon USA](https://www.amazon.com/dp/180056550X) (Getting Started with Streamlit for Data Science)
 - [Livro - Amazon Brasil](https://www.amazon.com.br/dp/180056550X/) (Getting Started with Streamlit for Data Science)
