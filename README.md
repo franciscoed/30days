@@ -1,35 +1,38 @@
-# 30 Days Of Streamlit 🎈
+# 30 Dias de Streamlit 🎈
 
-This is the official repo of `#30DaysOfStreamlit` — a 30-day social challenge for you to build and deploy [Streamlit](https://streamlit.io) apps.
+Este é o repositório oficial do `#30DaysOfStreamlit` — um desafio de 30 dias para você construir e fazer deploy de aplicações [Streamlit](https://streamlit.io).
 
-## How to participate
+## Como participar
 
-All you need to participate is a computer, a basic understanding of Python, and your curiosity. 🧠
+Tudo que você precisa é um computador, um conhecimento básico de python e curiosidade. 🧠
 
-A new challenge is released daily via Streamlit's [Twitter](https://twitter.com/streamlit) and [LinkedIn](https://www.linkedin.com/company/streamlit/posts/?feedView=all) accounts as well as the [`#30DaysOfStreamlit` app](https://share.streamlit.io/streamlit/30days/).
+Um novo desafio é liberado diariamente no [Twitter](https://twitter.com/streamlit) e [LinkedIn](https://www.linkedin.com/company/streamlit/posts/?feedView=all) da Streamlit, assim como no [`#30DaysOfStreamlit` app](https://share.streamlit.io/streamlit/30days/).
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/streamlit/30days/)
 
-Complete the daily challenges, share your solutions with us on Twitter or LinkedIn, and get rewarded with cool Streamlit swag! 😎
+Complete os desafios diários e compartilhe conosco no Twitter ou no Linkedin as suas soluções! 😎
 
-## What are the daily challenges?
+## Quais são os desafios diários?
 
-Find out more about the specific challenges by participating! The 30-day challenges are divided by 3 levels of difficulty to appeal to participants of all skill levels:
+Descubra mais participando dos desadios! O desafio 30-Dias é dividido em 3 níveis de dificuldade para atrair participantes de todos os níveis de conhecumento:
 
-| Beginner (Days 1-7) | Intermediate (Days 8-23) | Advanced (Days 24-30) |
+| Iniciante (Dias 1-7) | Intermediário (Dias 8-23) | Avançado (Dias 24-30) |
 | :---        |    :----   |          :--- |
-| Set up your local and cloud coding environments, install Streamlit, and build your first Streamlit app.| Learn about a new [Streamlit command](https://docs.streamlit.io/library/api-reference) each day and use it to create and deploy a simple Streamlit app. | Learn about important topics such as session state, efficient data and memory management via caching, complex layouts, and much more.
+| Configure o seus ambientes locais e remotos de desenvolvimento, instale o Streamlit e construa sua primeira aplicação.| Conheça cada dia mais mais sobre o [comando Streamlit](https://docs.streamlit.io/library/api-reference) e use-o para criar e fazer deploy de uma simples aplicação Streamlit. | Aprenda sobre tópicos importantes como estado de sessão, gerenciamento eficiente de dados e memória usando cache, layouts complexos e muito mais.
 
-## Prizes
+## Prêmios
 
-If getting up to speed with the fastest and easiest way to build data apps isn't already the best summer gift, you can also win Streamlit goodies!
+Se ganhar conhecimento, da maneira mais fácil e rápida de construir aplicações de dados já não é o melhor presente, você pode ainda ganhar brindes da Streamlit.
 
-Complete the daily challenges, share your solutions with us on [Twitter](https://twitter.com/streamlit) or [LinkedIn](https://www.linkedin.com/company/streamlit/posts/?feedView=all), and get rewarded with cool Streamlit swag! 🎁
 
-## Resources
+Complete os desafios diários, compartilhe conosco no [Twitter](https://twitter.com/streamlit) ou no [LinkedIn](https://www.linkedin.com/company/streamlit/posts/?feedView=all) as suas soluções e ganhe prêmios da Streamlit! 🎁
 
-- The official [`#30DaysOfStreamlit` app](https://share.streamlit.io/streamlit/30days/) where daily challenges are posted
-- Our [Twitter](https://twitter.com/streamlit) and [LinkedIn](https://www.linkedin.com/company/streamlit/posts/?feedView=all) feeds for daily updates
-- Streamlit [documentation](https://docs.streamlit.io/) and [cheat sheet](https://docs.streamlit.io/library/cheatsheet) for a thorough reference of Streamlit commands
-- Our awesome [Gallery](https://streamlit.io/gallery) for inspiration, templates, and community apps
-- Our [blog](https://blog.streamlit.io/how-to-master-streamlit-for-data-science/) for tips and the latest Streamlit info
+DISCLAIMER: Isso pode não estar disponível no seu país.
+
+## Recursos
+
+- [Aplicação oficial `#30DaysOfStreamlit`](https://share.streamlit.io/streamlit/30days/) onde os desafios serão postados diariamente (em inglês)
+- Nosso [Twitter](https://twitter.com/streamlit) e [LinkedIn](https://www.linkedin.com/company/streamlit/posts/?feedView=all) para atualizações diárias
+- [Documentation](https://docs.streamlit.io/) do Streamlit e uma [cheat sheet](https://docs.streamlit.io/library/cheatsheet) para uma referência completa dos comandos Streamlit.
+- Nossa [Galeria](https://streamlit.io/gallery) para inspiração, templates, e aplicações desenvolvidas pela comunidade.
+- Nosso [blog](https://blog.streamlit.io/how-to-master-streamlit-for-data-science/) para dicas e novidades sobre o Streamlit
