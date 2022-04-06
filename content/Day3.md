@@ -1,21 +1,22 @@
 # st.button
 
-`st.button` permite exibir um botão.
+`st.button` allows the display of a button widget.
 
-## O que estamos construindo?
+## What we're building?
 
-Uma aplicação simples que imprime condicionalmente mensages alternadas, dependendo se o botão estão pressionado ou não.
+A simple app that performs conditionally prints out alternative messages depending on whether the button was pressed or not.
 
-Fluxo da aplicação:
+Flow of the app:
 1. By default, the app prints `Goodbye`
 2. Upon clicking on the button, the app displays the alternative message `Why hello there`
 
-## Aplicação de Demonstração
-Depois te feito o deploy a aplicação ficará semelhante a mostrada no link abaixo.
+## Demo app
+The deployed Streamlit app should look something like the one shown in the below link: 
+
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.button/)
 
-## Código
-Aqui está o código para ser implementano na aplicação mencionada acima:
+## Code
+Here's the code to implement the above mentioned app:
 ```python
 import streamlit as st
 
@@ -27,18 +28,18 @@ else:
      st.write('Goodbye')
 ```
 
-## Explicação linha por linha
-A primeira coisa a fazer quando estiver criando uma aplicação Strealit é importar a biblioteca `streamlit` como `st`:
+## Line-by-line explanation
+The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` like so:
 ```python
 import streamlit as st
 ```
 
-Na sequência, vamos adicionar um texto de cabeçalho:
+This is followed by creating a header text for the app:
 ```python
 st.header('st.button')
 ```
 
-Agora, vamos utilizar condicionais `if` e `else` para imprimir as mensagens alternadamente.
+Next, we will use conditional statements `if` and `else` for printing alternative messages.
 
 ```python
 if st.button('Say hello'):
@@ -46,30 +47,28 @@ if st.button('Say hello'):
 else:
      st.write('Goodbye')
 ```
-Como podemos ver no código acima, o comando `st.button()` recebe `Say hello` como argumento de entrada, que é o texto que o botão exibirá. 
+As we can see from the above code box, the `st.button()` command accepts the `label` input argument of `Say hello`, which is the text that the button displays.
 
-O comando `st.write` é usado para imprimir mensages de texto, no caso `Why hello there` ou `Goodbye`, dependendo se o botão foi clicado ou não, que é implementando assim:
-
+The `st.write` command is used to print text messages of either `Why hello there` or `Goodbye` depending on whether the button was clicked or not, which is implemented via:
 ```python
 st.write('Why hello there')
 ```
-e
+and 
 ```python
 st.write('Goodbye')
 ```
 
-É importante mencionar que os comandos `st.write` estão dentro das condicionais `if` e `else` para poder imprimir as mensages alternadamente, conforme mencionado acima.
+It is important to note that the above `st.write` statements are placed under the `if` and `else` conditions in order to perform the above mentioned process of alternative displaying of messages
 
-## Próximos passos
+## Next steps
 
-Agora que você crirou a aplicação Streamlit localmente, é hora de fazer deploy para o 
-[Streamlit Cloud](https://streamlit.io/cloud) como será explicando em breve em um novo desafio.
+Now that you have created the Streamlit app locally, it's time to deploy it to [Streamlit Cloud](https://streamlit.io/cloud) as will be explained soon in an upcoming challenge. 
 
-Porque essa éa  primeira semana do desafio, nós estamos provendo o código fonte completo (nas caixas de código acima) e solução (a aplicação de exemplo) linkada nesta página. 
+Because this is the first week of your challenge, we provide the full code (as shown in the code box above) and solution (the demo app) right inside this webpage. 
 
-Mais adiante, nos próximos desafios, recomendamos que você primeiro tente implementar a aplicação Streamlit sozinho.
+Moving forward in the next challenges, it is recommended that you first try implementing the Streamlit app yourself.
 
-Não se preocupe, caso não consiha seguir adiante você sempre pode dar uma consultada na solução.
+Don't worry if you get stuck, you can always take a peek at the solution.
 
-## Referências
-Leia sobre o [`st.button`](https://docs.streamlit.io/library/api-reference/widgets/st.button) na documentação da API do Strealit
+## References
+Read about [`st.button`](https://docs.streamlit.io/library/api-reference/widgets/st.button) in the Streamlit API Documentation.
