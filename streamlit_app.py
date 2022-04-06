@@ -7,46 +7,51 @@ from PIL import Image
 import glob
 
 md_files = sorted([int(x.strip('Day').strip('.md')) for x in glob.glob1('content',"*.md") ])
-
 # Logo and Navigation
 col1, col2, col3 = st.columns((1,4,1))
 with col2:
     st.image(Image.open('streamlit-logo-secondary-colormark-darktext.png'))
-st.markdown('# 30 Days of Streamlit')
+st.markdown('# 30 Dias de Streamlit')
 
-days_list = [f'Day {x}' for x in md_files]
-selected_day = st.selectbox('Start the Challenge 👇', days_list)
+days_list = [f'Dia {x}' for x in md_files]
 
-with st.expander("About the #30DaysOfStreamlit"):
+selected_day = st.selectbox('Iniciar o Desafio 👇', days_list)
+
+with st.expander("Sobre o desafio #30DaysOfStreamlit"):
     st.markdown('''
-    The **#30DaysOfStreamlit** is a coding challenge designed to help you get started in building Streamlit apps.
-    
-    Particularly, you'll be able to:
-    - Set up a coding environment for building Streamlit apps
-    - Build your first Streamlit app
-    - Learn about all the awesome input/output widgets to use for your Streamlit app
+    O **#30DaysOfStreamlit** é um desafio de código desenvolvido para ajudar você a inicar a construção de apps com Streamlit.
+        
+    No final você conseguirá:
+    - Configurar o seu ambiente de desenvolvimento para construir apps com Streamlit 
+    - Construir sua primeira aplicação Streamlit 
+    - Aprender sobre todas as sensacionais ferramentas (*widgets*) que podem ser usadas no seu app Streamlit
     ''')
 
 # Sidebar
-st.sidebar.header('About')
-st.sidebar.markdown('[Streamlit](https://streamlit.io) is a Python library that allows the creation of interactive, data-driven web applications in Python.')
+st.sidebar.header('Sobre')
+st.sidebar.markdown('[Streamlit](https://streamlit.io) é uma biblioteca Python que permite a criação de aplicações interativasis, baseadas em dados em Python.')
 
-st.sidebar.header('Resources')
+st.sidebar.header('Recursos')
 st.sidebar.markdown('''
-- [Streamlit Documentation](https://docs.streamlit.io/)
+- [Documentação do Streamlit (em ingl6es)](https://docs.streamlit.io/)
 - [Cheat sheet](https://docs.streamlit.io/library/cheatsheet)
-- [Book](https://www.amazon.com/dp/180056550X) (Getting Started with Streamlit for Data Science)
-- [Blog](https://blog.streamlit.io/how-to-master-streamlit-for-data-science/) (How to master Streamlit for data science)
+- [Livro - Amazon USA](https://www.amazon.com/dp/180056550X) (Getting Started with Streamlit for Data Science)
+- [Livro - Amazon Brasil](https://www.amazon.com.br/dp/180056550X/) (Getting Started with Streamlit for Data Science)
+- [Livro - Amazon Espanha](https://www.amazon.es/-/pt/dp/180056550X/) (Getting Started with Streamlit for Data Science)
+
+- [Blog (em inglês)](https://blog.streamlit.io/how-to-master-streamlit-for-data-science/) (How to master Streamlit for data science)
 ''')
 
 st.sidebar.header('Deploy')
-st.sidebar.markdown('You can quickly deploy Streamlit apps using [Streamlit Cloud](https://streamlit.io/cloud) in just a few clicks.')
+st.sidebar.markdown('Você pode rapidamente fazer um deploy usando o [Streamlit Cloud](https://streamlit.io/cloud) em alguns cliques.')
 
 # Display content
 for i in days_list:
     if selected_day == i:
         st.markdown(f'# 🗓️ {i}')
-        j = i.replace(' ', '')
+        # Workaround to keep files name in English while displaying them in Portuguese
+        pt_to_en = i.replace('Dia', 'Day')
+        j = pt_to_en.replace(' ', '')
         with open(f'content/{j}.md', 'r') as f:
             st.markdown(f.read())
         if os.path.isfile(f'content/figures/{j}.csv') == True:
