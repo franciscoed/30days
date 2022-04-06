@@ -56,7 +56,7 @@ for i in days_list:
             st.markdown(f.read())
         if os.path.isfile(f'content/figures/{j}.csv') == True:
             st.markdown('---')
-            st.markdown('### Figures')
+            st.markdown('### Figuras')
             df = pd.read_csv(f'content/figures/{j}.csv', engine='python')
             for i in range(len(df)):
                 st.image(f'content/images/{df.img[i]}')

@@ -5,7 +5,7 @@ Antes de começarmos a desenvolver aplicações com Streamlit, primeiro vamos co
 Vamos começar instalando e configurando um ambiente conda.
 
 ## **Instalando conda**
-- Para instalat o `conda` abra o site https://docs.conda.io/en/latest/miniconda.html e escolha o sei sistema operacional (Windows, Mac ou Linux). 
+- Para instalar o `conda` abra o site https://docs.conda.io/en/latest/miniconda.html e escolha o seu sistema operacional (Windows, Mac ou Linux). 
 - Faça o download e rode o instalador.
 
 ## **Criando um novo ambiente conda**
@@ -33,8 +33,8 @@ Agora vamos instalar a biblioteca `streamlit`:
 pip install streamlit
 ```
 
-## **Inciando a aplicação de exemplo do Streamlit**
-Para iniciar a aplicação se exemplo (Figura 1), use o seguinte comando:
+## **Inciando a aplicação de demonstração do Streamlit**
+Para iniciar a aplicação de demonstração (Figura 1), use o seguinte comando:
 ```bash
 streamlit hello
 ```
