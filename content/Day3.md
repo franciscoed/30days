@@ -11,7 +11,7 @@ Fluxo da aplicação:
 2. Upon clicking on the button, the app displays the alternative message `Why hello there`
 
 ## Aplicação de Demonstração
-Depois te feito o deploy a aplicação ficará semelhante a mostrada no link abaixo.
+Depois de feito o deploy a aplicação ficará semelhante a mostrada no link abaixo.
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.button/)
 
 ## Código
