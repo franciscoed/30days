@@ -1,30 +1,24 @@
 # st.write
 
-`st.write` allows writing text and arguments to the Streamlit app.
+`st.write` permite exibir textos e argumentos (parâmetros) na aplicação Streamlit
 
-In addition to being able to display text, the following can also be displayed via the `st.write()` command:
+Além de exibir texto, o comando `st.write()` também pode exibir:
+- strings; funciona semelhante ao `st.markdown()`
+- Exibir dicionários (`dict`) Python
+- Exibir Dataframes do `pandas` como uma tabela
+- Plotar gráficos e figuras das seguinte bibliotecas: `matplotlib`, `plotly`, `altair`, `graphviz`, `bokeh`
+- e mais (veja [st.write na documentação da API](https://docs.streamlit.io/library/api-reference/write-magic/st.write))
 
+## O que estamos construindo?
 
-- Prints strings; works like `st.markdown()`
-- Displays a Python `dict`
-- Displays `pandas` DataFrame can be displayed as a table
-- Plots/graphs/figures from `matplotlib`, `plotly`, `altair`, `graphviz`, `bokeh`
-- And more (see [st.write on API docs](https://docs.streamlit.io/library/api-reference/write-magic/st.write))
+Um aplicação simple mostrando diversas maneiras de como usar o comando `st.write()` para exibir texto, números,  Dataframes e gráficos.
 
-## What we're building?
-
-A simple app showing the various ways on how to use the `st.write()` command for displaying text, numbers, DataFrames and plots.
-
-## Demo app
-
-The deployed Streamlit app should look something like the one shown in the below link:
-
+## Aplicação de demonstração
+Depois de feito o deploy a aplicação ficará semelhante a mostrada no link abaixo.
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.write/)
 
-## Code
-
-Here's how to use st.write:
-
+## Coódigo
+Como usar o st.write:
 ```python
 import numpy as np
 import altair as alt
@@ -33,15 +27,15 @@ import streamlit as st
 
 st.header('st.write')
 
-# Example 1
+# Exemplo 1
 
 st.write('Hello, *World!* :sunglasses:')
 
-# Example 2
+# Exemplo 2
 
 st.write(1234)
 
-# Example 3
+# Exemplo 3
 
 df = pd.DataFrame({
      'first column': [1, 2, 3, 4],
@@ -49,11 +43,11 @@ df = pd.DataFrame({
      })
 st.write(df)
 
-# Example 4
+# Exemplo 4
 
 st.write('Below is a DataFrame:', df, 'Above is a dataframe.')
 
-# Example 5
+# Exemplo 5
 
 df2 = pd.DataFrame(
      np.random.randn(200, 3),
@@ -63,37 +57,31 @@ c = alt.Chart(df2).mark_circle().encode(
 st.write(c)
 ```
 
-## Line-by-line explanation
-
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` like so:
-
+## Explicação linha por linha
+A primeira coisa a fazer quando estiver criando uma aplicação Strealit é importar a biblioteca `streamlit` como `st`:
 ```python
 import streamlit as st
 ```
 
-This is followed by creating a header text for the app:
-
+Na sequência, vamos adicionar um texto de cabeçalho:
 ```python
 st.header('st.write')
 ```
 
-**Example 1**
-Its basic use case is to display text and Markdown-formatted text:
-
+**Exemplo 1**
+Caso de uso mais básico, exibir texto e texto no formato Markdown:
 ```python
 st.write('Hello, *World!* :sunglasses:')
 ```
 
-**Example 2**
-As mentioned above, it can also be used to display other data formats such as numbers:
-
+**Exemplo 2**
+Como mencionado acima, também podemos exibir outros foramdos, como números:
 ```python
 st.write(1234)
 ```
 
-**Example 3**
-DataFrames can also be displayed as follows:
-
+**Exemplo 3**
+DataFrames também podem ser exibidos:
 ```python
 df = pd.DataFrame({
      'first column': [1, 2, 3, 4],
@@ -103,15 +91,13 @@ st.write(df)
 ```
 
 **Example 4**
-You can pass in multiple arguments:
-
+Você pode passar múltiplos argumentos (parâmetros):
 ```python
 st.write('Below is a DataFrame:', df, 'Above is a dataframe.')
 ```
 
 **Example 5**
-Finally, you can also display plots as well by passing it to a variable as follows:
-
+Finalmente, você também pode exibir dados de gráficos, passando os dados para uma variável da seguinte maneira:
 ```python
 df2 = pd.DataFrame(
      np.random.randn(200, 3),
@@ -121,26 +107,23 @@ c = alt.Chart(df2).mark_circle().encode(
 st.write(c)
 ```
 
-## Demo app
-
-The deployed Streamlit app should look something like the one shown in the below link:
-
+## Aplicação de demonstração
+Depois de feito o deploy a aplicação ficará semelhante a mostrada no link abaixo.
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.write/)
 
-## Next steps
+## Próximos passos
 
-Now that you have created the Streamlit app locally, it's time to deploy it to [Streamlit Cloud](https://streamlit.io/cloud) as will be explained soon in an upcoming challenge.
+Agora que você crirou a aplicação Streamlit localmente, é hora de fazer deploy para o 
+[Streamlit Cloud](https://streamlit.io/cloud) como será explicando em breve em um novo desafio.
 
-Because this is the first week of your challenge, we provide the full code (as shown in the code box above) and solution (the demo app) right inside this webpage.
+Porque essa éa  primeira semana do desafio, nós estamos provendo o código fonte completo (nas caixas de código acima) e solução (a aplicação de exemplo) linkada nesta página. 
 
-Moving forward in the next challenges, it is recommended that you first try implementing the Streamlit app yourself.
+Mais adiante, nos próximos desafios, recomendamos que você primeiro tente implementar a aplicação Streamlit sozinho.
 
-Don't worry if you get stuck, you can always take a peek at the solution.
+Não se preocupe, caso não consiha seguir adiante você sempre pode dar uma consultada na solução.
 
-## Further reading
-
-In addition to [`st.write`](https://docs.streamlit.io/library/api-reference/write-magic/st.write), you can explore the other ways of displaying text:
-
+## Leitura complementar
+Além do [`st.write`](https://docs.streamlit.io/library/api-reference/write-magic/st.write), você pode explorar outras maneiras de exibir texto:
 - [`st.markdown`](https://docs.streamlit.io/library/api-reference/text/st.markdown)
 - [`st.header`](https://docs.streamlit.io/library/api-reference/text/st.header)
 - [`st.subheader`](https://docs.streamlit.io/library/api-reference/text/st.subheader)
