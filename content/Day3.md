@@ -7,8 +7,8 @@
 Uma aplicação simples que imprime condicionalmente mensages alternadas, dependendo se o botão estão pressionado ou não.
 
 Fluxo da aplicação:
-1. By default, the app prints `Goodbye`
-2. Upon clicking on the button, the app displays the alternative message `Why hello there`
+1. Por padrão, a aplicação imprime `Goodbye`
+2. Após clicar no botão, a aplicação imprime `Why hello there`
 
 ## Aplicação de Demonstração
 Depois de feito o deploy a aplicação ficará semelhante a mostrada no link abaixo.
