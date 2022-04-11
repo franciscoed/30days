@@ -1,27 +1,27 @@
 # st.line_chart
 
-`st.line_chart` allows writing text and arguments to the Streamlit app.
+`st.line_chart` permite exibir um gráfico de linhas
 
-## What we're building?
+## O que estamos construindo?
 
-A simple app for displaying a line chart.
+Uma aplicação simples para exibir um gráfico de linhas
 
-Flow of the app:
-1. Create a `Pandas` DataFrame from numbers randomly generated via `NumPy`.
-2. Create and display the line chart via `st.line_chart()` command.
+Fluxo da aplicação:
+1. Cria um DataFrame pandas com números gerados aleatoriamente pelo `NumPy`.
+2. Cria e mostra um gráfico de linha usando o comando `st.line_chart()`.
 
-## Demo app
+## Aplicação de demonstração
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.line_chart/)
 
-## Code
-Here's how to use [`st.line_chart`](https://docs.streamlit.io/library/api-reference/charts/st.line_chart):
+## Código
+Veja aqui mais informações sobre como usar o [`st.line_chart`](https://docs.streamlit.io/library/api-reference/charts/st.line_chart):
 ```python
 import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.header('Line chart')
+st.header('Gráfico de linhas')
 
 chart_data = pd.DataFrame(
      np.random.randn(20, 3),
@@ -31,31 +31,31 @@ st.line_chart(chart_data)
 
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` as well as other libraries like so:
+## Explicação linha por linha
+A primeira coisa a fazer quando estiver criando uma aplicação Strealit é importar a biblioteca `streamlit` como `st`:
 ```python
 import streamlit as st
 import pandas as pd
 import numpy as np
 ```
 
-Next, we create a header text for the app:
+Na sequência, vamos adicionar um texto de cabeçalho:
 ```python
-st.header('Line chart')
+st.header('Gráfico de linhas')
 ```
 
-Then, we create a DataFrame of randomly generated numbers that contains 3 columns.
+Agora, nós criamos o Dataframe de 3 colunas com números aleatórios. 
 ```python
 chart_data = pd.DataFrame(
      np.random.randn(20, 3),
      columns=['a', 'b', 'c'])
 ```
 
-Finally, a line chart is created by using `st.line_chart()` with the DataFrame stored in the `chart_data` variable as  the input data:
+Finalmente, um gráfico de linhas é criado usando `st.line_chart()` com o DataFrame armazenado na variável `chart_data` como entrada:
 ```python
 st.line_chart(chart_data)
 ```
 
-## Further reading
-Read more about the following related Streamlit command from which [`st.line_chart`](https://docs.streamlit.io/library/api-reference/charts/st.line_chart) is based on:
+## Leitura complementar
+Leia mais sobre o comando abaixo, pois o [`st.line_chart`](https://docs.streamlit.io/library/api-reference/charts/st.line_chart) se baseia nele:
 - [`st.altair_chart`](https://docs.streamlit.io/library/api-reference/charts/st.altair_chart)
