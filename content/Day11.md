@@ -1,50 +1,50 @@
 # st.multiselect
 
-`st.multiselect` displays a multiselect widget.
+`st.multiselect` exibe um componente de seleção múltipla
 
-## Demo app
+## Aplicação de Demonstração
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.multiselect/)
 
-## Code
-Here's how to use `st.multiselect`:
+## Código
+Como usar o  `st.multiselect`:
 ```python
 import streamlit as st
 
 st.header('st.multiselect')
 
 options = st.multiselect(
-     'What are your favorite colors',
-     ['Green', 'Yellow', 'Red', 'Blue'],
-     ['Yellow', 'Red'])
+     'Quais são suas cores favoritas?',
+     ['Verde', 'Amarelo', 'Vermelho', 'Azul'],
+     ['Amarelo', 'Vermelho'])
 
-st.write('You selected:', options)
+st.write('Você selecionou:', options)
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` like so:
+## Explicação linha por linha
+A primeira coisa a fazer quando estiver criando uma aplicação Strealit é importar a biblioteca `streamlit` como `st`:
 ```python
 import streamlit as st
 ```
 
-This is followed by creating a header text for the app:
+Na sequência, vamos adicionar um texto de cabeçalho:
 ```python
 st.header('st.multiselect')
 ```
 
-Next, we're going to use the `st.multiselect` widget to accept input where users will be able to select one or more colors of there choice.
+Agora, nós vamos usar o componente `st.multiselect` para receber a entrada dos usuários, que escolherão uma ou mais cores. 
 
 ```python
 options = st.multiselect(
-     'What are your favorite colors',
-     ['Green', 'Yellow', 'Red', 'Blue'],
-     ['Yellow', 'Red'])
+     'Quais são suas cores favoritas?',
+     ['Verde', 'Amarelo', 'Vermelho', 'Azul'],
+     ['Amarelo', 'Vermelho'])
 ```
 
-Finally, we'll write out the selected colors:
+Finalmente vamos imprimir as cores selecionadas:
 ```python
-st.write('You selected:', options)
+st.write('Você selecionou:', options)
 ```
 
-## Further reading
+## Leitura complementar
 - [`st.multiselect`](https://docs.streamlit.io/library/api-reference/widgets/st.multiselect)
