@@ -1,24 +1,24 @@
 # st.slider
 
-`st.slider` allows the display of a slider input widget.
+`st.slider` permite exibir um controle deslizante (slider).
 
-The following data types are supported: int, float, date, time, and datetime.
+Os seguintes tipos do Python são suportados: int, float, date, time, and datetime.
 
-## What we're building?
+## O que estamos construindo?
 
-A simple app that shows the various ways on how to accept user input by adjusting the slider widget.
+Uma palicação simples, que mostras as diversas maneiras de como aceitar a entrada do usuários com o controle deslizante (slider).
 
-Flow of the app:
-1. User selects value by adjusting the slider widget
-2. App prints out the selected value
+Fluxo da aplicação:
+1. Usuário seleciona o valor ajustando controle deslizante (slider). 
+2. Aplicação imprime o valor selecionado
 
-## Demo app
+## Aplicação de demonstração
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.slider/)
 
 
-## Code
-Here's how to use st.slider:
+## Código
+Como usar o st.slider:
 
 ```python
 import streamlit as st
@@ -26,131 +26,132 @@ from datetime import time, datetime
 
 st.header('st.slider')
 
-# Example 1
+# Exemplo 1
 
 st.subheader('Slider')
 
-age = st.slider('How old are you?', 0, 130, 25)
-st.write("I'm ", age, 'years old')
+age = st.slider('Quantos anos você tem?', 0, 130, 25)
+st.write("Eu tenho ", age, ' anos')
 
-# Example 2
+# Exemplo 2
 
-st.subheader('Range slider')
+st.subheader('Slider de intervalo')
 
 values = st.slider(
-     'Select a range of values',
+     'Escolha um intervalo de valores',
      0.0, 100.0, (25.0, 75.0))
-st.write('Values:', values)
+st.write('Valores:', values)
 
-# Example 3
+# Exemplo 3
 
-st.subheader('Range time slider')
+st.subheader('Slider de intervalo de tempo')
 
 appointment = st.slider(
-     "Schedule your appointment:",
+     "Agende um compromisso:",
      value=(time(11, 30), time(12, 45)))
-st.write("You're scheduled for:", appointment)
+st.write("O compromisso foi agendado para:", appointment)
 
-# Example 4
+# Exemplo 4
 
-st.subheader('Datetime slider')
+st.subheader('Slider de data e hora')
 
 start_time = st.slider(
-     "When do you start?",
+     "Quando você vai começar?",
      value=datetime(2020, 1, 1, 9, 30),
      format="MM/DD/YY - hh:mm")
-st.write("Start time:", start_time)
+st.write("Início:", start_time)
 
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` like so:
+## Explicação linha por linha
+A primeira coisa a fazer quando estiver criando uma aplicação Strealit é importar a biblioteca `streamlit` como `st`:
 ```python
 import streamlit as st
 from datetime import time, datetime
 ```
 
-This is followed by creating a header text for the app:
+Na sequência, vamos adicionar um texto de cabeçalho:
 ```python
 st.header('st.slider')
 ```
 
-**Example 1**
+**Exemplo 1**
 
 Slider:
 
 ```python
 st.subheader('Slider')
 
-age = st.slider('How old are you?', 0, 130, 25)
-st.write("I'm ", age, 'years old')
+age = st.slider('Quantos anos você tem?', 0, 130, 25)
+st.write("Eu tenho ", age, ' anos')
 ```
 
-As we can see, the `st.slider()` command
-is used to collect user input about the age of users.
+Como você pode perceber, o comando `st.slider()`
+é usado para pegar a entrada do usuários sobre a idade.
 
-The first input argument displays the text just above the **slider** widget asking `'How old are you?'`.
+O primeiro argumento (parâmetro) exibe o texto acima do **slider** perguntando `'Quantos anos você tem?'`.
 
-The following three integers `0, 130, 25` represents the minimum, maximum and default values, respectively.
+Os três números inteiros a seguir `0, 130, 25` representam, respectivamente, o mínimo, máximo e o padrão.
 
-**Example 2**
+**Exemplo 2**
 
-Range slider:
+Slider de intervalo:
 
 ```python
-st.subheader('Range slider')
+st.subheader('Slider de intervalo')
 
 values = st.slider(
-     'Select a range of values',
+     'Escolha um intervalo de valores',
      0.0, 100.0, (25.0, 75.0))
-st.write('Values:', values)
+st.write('Valores:', values)
 ```
 
-The range slider allow selection of a lower and upper bound value pair.
+O slider de intervalo permite a seleção de um par de valores.
 
-The first input argument displays the text just above the **range slider** widget asking `'Select a range of values'`.
+O primeiro argumento (parâmetro) exibe o texto acima do **slider de intervalo** pedindo `'Escolha um intervalo de valores'`.
 
-The following three arguments `0.0, 100.0, (25.0, 75.0)` represents the minimum and maximum values while the last tuple denotes the default values to use as the selected lower (25.0) and upper (75.0) bound values.
+Os três argumentos (parâmetros) a seguir `0.0, 100.0, (25.0, 75.0)` representam o valor mínimo e o máximo, enquanto que a `tupla` são os valores padrões para o par de números.
 
-**Example 3**
+**Exemplo 3**
 
-Range time slider:
+Slider de intervalo de tempo:
 
 ```python
-st.subheader('Range time slider')
+st.subheader('Slider de intervalo de tempo')
 
 appointment = st.slider(
-     "Schedule your appointment:",
+     "Agende um compromisso:",
      value=(time(11, 30), time(12, 45)))
-st.write("You're scheduled for:", appointment)
+st.write("O compromisso foi agendado para:", appointment)
 ```
 
-The range time slider allows selection of a lower and upper bound value pair of datetime.
+O slider de intervalo de tempo permite a seleção de um par de valores do tipo `datetime`.
 
-The first input argument displays the text just above the **range time slider** widget asking `'Schedule your appointment:`.
 
-The default values for the lower and upper bound value pairs of datetime are set to 11:30 and 12:45, respectively.
+O primeiro argumento (parâmetro) exibe o texto acima do **Slider de intervalo de tempo** pedindo `'Agende um compromisso:`.
 
-**Example 4**
+O valor padrão para o intervalo é das 11:30 até as 12:45.
 
-Datetime slider:
+**Exemplo 4**
+
+Slider de data e hora:
 
 ```python
-st.subheader('Datetime slider')
+st.subheader('Slider de data e hora')
 
 start_time = st.slider(
-     "When do you start?",
+     "Quando você vai começar?",
      value=datetime(2020, 1, 1, 9, 30),
      format="MM/DD/YY - hh:mm")
-st.write("Start time:", start_time)
+st.write("Início:", start_time)
 ```
 
-The datetime slider allows selection of a datetime.
+O slider de data e hora permite a seleção de data e hora, tipo `datetime` do Python.
 
-The first input argument displays the text just above the **datetime** slider widget asking `'When do you start?'`.
+O primeiro argumento (parâmetro) exibe o texto acima do **Slider de data e hora** perguntando `'Quando você vai começar?'`.
 
-The default value for the datetime was set using the `value` option to be January 1, 2020 at 9:30
+O valor padrão para data e hora (datetime) foi definido usando o `valor`: 1 de Janeiro de 2020 as 9:30.
 
-## Further reading
-You can also explore the following related widget:
+## Leitura complementar
+Você pode ler mais sobre um componente relacionado:
 - [`st.select_slider`](https://docs.streamlit.io/library/api-reference/widgets/st.select_slider)
