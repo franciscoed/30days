@@ -2,9 +2,9 @@
 
 `st.line_chart` permite exibir um gráfico de linhas
 
-This is syntax-sugar around `st.altair_chart`. The main difference is this command uses the data's own column and indices to figure out the chart's spec. As a result this is easier to use for many "just plot this" scenarios, while being less customizable.
+Este é um [açúcar sintático](https://pt.wikipedia.org/wiki/A%C3%A7%C3%BAcar_sint%C3%A1tico) relacionado ao  `st.altair_chart`. A principal diferença é que este comando usa as colunas e índices dos próprios dados e tenta descobrir a melhora maneira de exibir o gráfico. Ou seja, é mais fácil de usar para os cenários "apenas exiba o gráfico", porém menos customizável.
 
-If `st.line_chart` does not guess the data specification correctly, try specifying your desired chart using st.altair_chart.
+Se o `st.line_chart` não acertar a melhor maneira de exibir o gráfico, ou o melhor tipo, tente usar o `st.altair_chart` e especifique a informação desejada.
 
 ## O que estamos construindo?
 
