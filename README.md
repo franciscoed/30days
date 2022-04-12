@@ -1,6 +1,7 @@
 # 30 Dias de Streamlit 🎈
 
 Este é o repositório traduzido do oficial `#30DaysOfStreamlit` — um desafio de 30 dias para você construir e fazer deploy de aplicações [Streamlit](https://streamlit.io).
+
 O repositório oficial pode ser encontrado em https://github.com/streamlit/30days
 
 ## Como participar
