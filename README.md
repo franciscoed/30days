@@ -33,18 +33,14 @@ DISCLAIMER: Isso pode não estar disponível no seu país.
 
 ## Recursos
 
-<<<<<<< HEAD
 - [Aplicação oficial `#30DaysOfStreamlit`](https://share.streamlit.io/streamlit/30days/) onde os desafios serão postados diariamente (em inglês)
 - Nosso [Twitter](https://twitter.com/streamlit) e [LinkedIn](https://www.linkedin.com/company/streamlit/posts/?feedView=all) para atualizações diárias
 - [Documentation](https://docs.streamlit.io/) do Streamlit e uma [cheat sheet](https://docs.streamlit.io/library/cheatsheet) para uma referência completa dos comandos Streamlit.
 - Nossa [Galeria](https://streamlit.io/gallery) para inspiração, templates, e aplicações desenvolvidas pela comunidade.
-- Nosso [blog](https://blog.streamlit.io/how-to-master-streamlit-for-data-science/) para dicas e novidades sobre o Streamlit
-=======
-Want to help us expand the reach of `#30DaysOfStreamlit` and English isn't your primary language? Translate the challenges into your preferred language and link to them below!
->>>>>>> upstream/master
+- Nosso [blog](https://blog.streamlit.io/how-to-master-streamlit-for-data-science/) para dicas e novidades sobre o Streamlits
 
 ## Traduções
 
-Quer ajudar a expandir o alcance do `#30daysofStreamlit` e Inglês não é sua idioma nativo? Traduza os desafios na seu idioma e adicione o link abaixo!
+Quer ajudar a expandir o alcance do `#30DaysOfStreamlit` e Inglês não é sua idioma nativo? Traduza os desafios na seu idioma e adicione o link abaixo!
 
 - [Português](https://github.com/franciscoed/30days) (por [franciscoed](https://github.com/franciscoed)): [![30 Dias de Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/franciscoed/30days)
