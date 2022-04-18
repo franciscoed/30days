@@ -1,13 +1,13 @@
 # st.secrets
 
-`st.secrets` allows you to store confidential information such as API keys, database passwords or other credentials.
+`st.secrets` permite que você armazene informações confidenciais (segredos) como chaves de API, senhas de bancos de dados e outras credenciais.
 
-## Demo app
+## Aplicação de demonstração
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.secrets/)
 
-## Code
-Here's how to use `st.secrets`:
+## Código
+Veha como usar o `st.secrets`:
 ```python
 import streamlit as st
 
@@ -16,26 +16,27 @@ st.title('st.secrets')
 st.write(st.secrets['message'])
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` like so:
+## Explicação linha por linha
+A primeira coisa a fazer quando estiver criando uma aplicação Strealit é importar a biblioteca `streamlit` como `st`:
 ```python
 import streamlit as st
 ```
 
-This is followed by creating a title text for the app:
+Na sequência, vamos adicionar um texto de cabeçalho:
 ```python
 st.title('st.secrets')
 ```
 
-Finally, we'll be displaying the stored secrets:
+Finalmente, vamos exibir as informações confidenciais armazenadas:
 ```python
 st.write(st.secrets['message'])
 ```
 
-It should be noted that, secrets can be stored in Streamlit Cloud as shown in the screenshots shown below.
+As informações confidenciais (segredos) podem ser armazenados no Streamlit Cloud como mostrados nas capturas de tela mencionadas abaixo.
 
-If working locally, they can be stored in `.streamlit/secrets.toml`, but make sure to avoid uploading this to a GitHub repo when deploying the app.
+Caso esteja trabalhando localmente, as informações podem ser armazenadas em `.streamlit/secrets.toml`, tome muito cuidado para não fazer upload desse arquivo para o GitHub quando estiver fazendo um deploy.
 
-## Further reading
-- [Add secrets to your Streamlit apps](https://blog.streamlit.io/secrets-in-sharing-apps/)
-- [Secrets management](https://docs.streamlit.io/streamlit-cloud/get-started/deploy-an-app/connect-to-data-sources/secrets-management)
+
+## Leitura complementar
+- [Adicionando segredos às suas aplicações](https://blog.streamlit.io/secrets-in-sharing-apps/)
+- [Gerenciamento de segredos](https://docs.streamlit.io/streamlit-cloud/get-started/deploy-an-app/connect-to-data-sources/secrets-management)
