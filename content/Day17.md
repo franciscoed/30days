@@ -7,7 +7,7 @@
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.secrets/)
 
 ## Código
-Veha como usar o `st.secrets`:
+Veja como usar o `st.secrets`:
 ```python
 import streamlit as st
 

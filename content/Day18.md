@@ -9,7 +9,7 @@ Por padrão, o tamanho dos arquivos para upload é limitado em 200MB. Você pode
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.file_uploader/)
 
 ## Código
-Veha como usar o `st.file_uploader`:
+Veja como usar o `st.file_uploader`:
 ```python
 import streamlit as st
 import pandas as pd
