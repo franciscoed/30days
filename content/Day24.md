@@ -1,32 +1,34 @@
 # st.cache
 
-`st.cache` allows you to optimize the performance of your Streamlit app.
+`st.cache` permite otimizar a performance da sua aplicação Streamlit.
 
-Streamlit provides a caching mechanism that allows your app to stay performant even when loading data from the web, manipulating large datasets, or performing expensive computations. This is done with the `@st.cache` decorator.
 
-When you mark a function with the @st.cache decorator, it tells Streamlit that whenever the function is called it needs to check a few things:
+O Streamlit fornece um mecanismo de cache que permite que sua aplicação mantenha a performance mesmo ao carregar dados da Web, manipular grandes conjuntos de dados(datasets) ou realizar cálculos caros. Isso é feito com o decorador(decorator) `@st.cache`.
 
-1. The input parameters that you called the function with
-2. The value of any external variable used in the function
-3. The body of the function
-4. The body of any function used inside the cached function
 
-If this is the first time Streamlit has seen these four components with these exact values and in this exact combination and order, it runs the function and stores the result in a local cache. Then, next time the cached function is called, if none of these components changed, Streamlit will just skip executing the function altogether and, instead, return the output previously stored in the cache.
+Quando você marca uma função com o decorator @st.cache, ele informa ao Streamlit que sempre que a função é chamada, ele precisa verificar algumas coisas:
 
-The way Streamlit keeps track of changes in these components is through hashing. Think of the cache as an in-memory key-value store, where the key is a hash of all of the above and the value is the actual output object passed by reference.
+1. Os parâmetros de entrada com os quais você chamou a função
+2. O valor de qualquer variável externa usada na função
+3. O corpo da função
+4. O corpo de qualquer função usada dentro da função cacheada
 
-Finally, `@st.cache` supports arguments to configure the cache's behavior. You can find more information on those in our API reference.
+Se esta é a primeira vez que o Streamlit vê esses quatro componentes com esses exatos valores, nessa combinação e ordem exatas, ele executa a função e armazena o resultado em um cache local. Então, na próxima vez que a função em cache é chamada, se nenhum desses componentes for alterado, o Streamlit vai pular a execução da função e, em vez disso, retornará a saída armazenada anteriormente no cache.
 
-## How to use?
+A maneira como o Streamlit acompanha as mudanças nesses componentes é usando um hash. Pense no cache como um armazenamento chave-valor em memória, onde a chave é um hash de todos os itens acima e o valor é o objeto de saída real, passado por referência.
 
-You can simply add `st.cache` decorator on the preceding line of a custom function that you define in your Streamlit app. See the example below.
+Finalmente, `@st.cache` suporta argumentos(parâmetros) para configurar o comportamento do cache. Você pode encontrar mais informações sobre eles na documentação da API.
 
-## Demo app
+## Como usar?
+
+Você pode adicionar o decorator `st.cache` na linha anterior de uma função personalizada, que você define em sua aplicação Streamlit. Veja o exemplo abaixo.
+
+## Aplicação de demonstração
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.cache/)
 
-## Code
-Here's how to use `st.cache`:
+## Código
+Veja como usar o `st.cache`:
 ```python
 import streamlit as st
 import numpy as np
@@ -35,9 +37,9 @@ from time import time
 
 st.title('st.cache')
 
-# Using cache
+# Usando cache
 a0 = time()
-st.subheader('Using st.cache')
+st.subheader('Usando st.cache')
 
 @st.cache(suppress_st_warning=True)
 def load_data_a():
@@ -52,9 +54,9 @@ a1 = time()
 st.info(a1-a0)
 
 
-# Not using cache
+# sem usar cache
 b0 = time()
-st.subheader('Not using st.cache')
+st.subheader('Sem usar st.cache')
 
 def load_data_b():
   df = pd.DataFrame(
@@ -68,8 +70,8 @@ b1 = time()
 st.info(b1-b0)
 ```
 
-## Line-by-line explanation
-The very first thing to do when creating a Streamlit app is to start by importing the `streamlit` library as `st` as well as other libraries used in the app like so:
+## Explicação linha por linha
+A primeira coisa a fazer quando estiver criando uma aplicação Strealit é importar a biblioteca `streamlit` como `st` assim com as outras bibliotecas utilizadas na aplicação:
 ```python
 import streamlit as st
 import numpy as np
@@ -77,12 +79,12 @@ import pandas as pd
 from time import time
 ```
 
-This is followed by creating a title text for the app:
+Na sequência, vamos adicionar um texto de cabeçalho:
 ```python
 st.title('Streamlit Cache')
 ```
 
-Next, we'll define 2 custom functions for generating a large DataFrame where the first one makes use of the `st.cache` decorator while the second does not:
+Em seguida, vamos definir 2 funções personalizadas para gerar um grande DataFrame, onde a primeira faz uso do decorator `st.cache` e a segunda não:
 ```python
 @st.cache(suppress_st_warning=True)
 def load_data_a():
@@ -100,11 +102,11 @@ def load_data_b():
   return df
 ```
 
-Finally, we run the custom function while also timing the run time using the `time()` command.
+Finalmente, vamos executar a função personalizada, enquanto também cronometramos o tempo de execução usando o comando `time()`.
 ```python
-# Using cache
+# Usando cache
 a0 = time()
-st.subheader('Using st.cache')
+st.subheader('Usando st.cache')
 
 # We insert the load_data_a function here
 
@@ -112,9 +114,9 @@ st.write(load_data_a())
 a1 = time()
 st.info(a1-a0)
 
-# Not using cache
+# Sem usar cache
 b0 = time()
-st.subheader('Not using st.cache')
+st.subheader('Sem usar st.cache')
 
 # We insert the load_data_b function here
 
@@ -123,11 +125,11 @@ b1 = time()
 st.info(b1-b0)
 ```
 
-Notice how the first run may provide roughly similar run time. Reload the app and notice how the run time changes when using the `st.cache` decorator. Did you observe any speed increase?
+Observe como a primeira execução pode fornecer um tempo de execução aproximadamente semelhante. Recarregue(refresh) a aplicação e observe como o tempo de execução muda ao usar o decorator `st.cache`. Você observou algum aumento de velocidade?
 
-## Further reading
-- [`st.cache` API Documentation](https://docs.streamlit.io/library/api-reference/performance/st.cache)
-- [Optimize performance with `st.cache`](https://docs.streamlit.io/library/advanced-features/caching)
-- [Experimental cache primitives](https://docs.streamlit.io/library/advanced-features/experimental-cache-primitives)
+## Leitura complementar
+- [`st.cache` Documentação da API](https://docs.streamlit.io/library/api-reference/performance/st.cache)
+- [Otimize a performance com `st.cache`](https://docs.streamlit.io/library/advanced-features/caching)
+- [Instruções primitivas de cache - Experimental](https://docs.streamlit.io/library/advanced-features/experimental-cache-primitives)
 - [`st.experimental_memo`](https://docs.streamlit.io/library/api-reference/performance/st.experimental_memo)
 - [`st.experimental_singleton`](https://docs.streamlit.io/library/api-reference/performance/st.experimental_singleton)
