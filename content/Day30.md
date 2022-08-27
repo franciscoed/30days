@@ -2,7 +2,6 @@
 
 Hoje é o dia 30 do desafio *#30DaysOfStreamlit*. Parabéns por chegar tão longe no desafio.
 
-In this tutorial, we're going to put our newfound knowledge from this learning challenge to create Streamlit apps to solve real-world problem.
 Neste tutorial, vamos colocar nosso conhecimento recém-descoberto desse desafio de aprendizado para criar aplicações Streamlit para resolver problemas do mundo real.
 
 ## Problema do mundo real.

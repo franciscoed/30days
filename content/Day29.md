@@ -1,4 +1,4 @@
-# Como fazer um classificador de texto de aprendizado zero-shot usando Hugging Face e Streamlit
+# Como fazer um classificador de texto (com aprendizado zero-shot) usando Hugging Face e Streamlit
 
 No desafio de hoje, [Charly Wargnier](https://twitter.com/DataChaz) vai nos guiar pelo processo de desenvolvimento de um classificador de texto de aprendizado zero-shot usando Hugging Face e Streamlit.
 
