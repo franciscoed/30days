@@ -70,7 +70,7 @@ Em seguida, forneceremos instruções aos visitantes da aplicação, sobre como 
 st.header('1. Instruções')
 st.markdown('''
 Na barra de URL do seu navegador de internet, anexe o seguinte:
-`?name=Jack&surname=Beanstalk`
+`?firstname=Jack&surname=Beanstalk`
 depois da URL base `http://share.streamlit.io/dataprofessor/st.experimental_get_query_params/`
 então ficará assim 
 `http://share.streamlit.io/dataprofessor/st.experimental_get_query_params/?firstname=Jack&surname=Beanstalk`
